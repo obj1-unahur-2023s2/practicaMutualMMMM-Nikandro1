@@ -1,0 +1,79 @@
+import viajes.*
+/*
+describe "probamos viajes de playa"{
+	const playa1 = new DePlaya(largoPlaya = 10000)
+	
+	method initialize(){
+		playa1.llevaEsfuerzo()
+		playa1.duracion()
+		playa1.tomaColor()
+	}
+	
+	test "probamos que la duracion es de 20 dias"{
+		assert.equals(20, playa1.cantidadDias())
+	}
+	test "probamos que leva esfuerzo"{
+		assert.that(playa1.implicaEsfuerzo())
+	}
+	test "probamos que sirve para broncearse"{
+		assert.that(playa1.paraBroncear())
+	}
+	test "agregamos dos idiomas y mostramos que aparece como idomas del viaje"{
+		playa1.agregarIdioma("Español")
+		playa1.agregarIdioma("Ingles")
+		assert.equals(playa1.idiomas(), #{"Español", "Ingles"})
+	}
+}
+
+describe "probamos viajes de ciudad y de ciudad tropical"{
+	const ciudad1 = new DeCiudad(cantidadAtracciones = 4)
+	const tropi1 = new CiudadTropical(cantidadAtracciones = 4)
+	method initialize(){
+		ciudad1.llevaEsfuerzo()
+		ciudad1.duracion()
+		ciudad1.tomaColor()
+		tropi1.llevaEsfuerzo()
+		tropi1.duracion()
+		tropi1.tomaColor()
+	}
+	test "la cantidad de dias que dura es 2 para el de ciudad"{
+		assert.equals(2, ciudad1.cantidadDias())
+	}
+	test "para el ciudad tropical en cambio dura 3"{
+		assert.equals(3, tropi1.cantidadDias())
+	}
+	
+	test" el viaje no lleva esfuerzo para ninguno de los 2"{
+		assert.notThat(ciudad1.implicaEsfuerzo())
+		assert.notThat(tropi1.implicaEsfuerzo())
+		
+	}
+	test"el viaje de ciudad no sirve para broncearse"{
+		assert.notThat(ciudad1.paraBroncear())
+	}
+	test "el viaje de ciudad tropical si sirve para broncearse"{
+		assert.that(tropi1.paraBroncear())
+	}
+	
+}
+* 
+*/
+
+describe "probamos los viajes de trekking"{
+	const tre1 = new Trekking(kmSenderos = 100, diasDeSol = 130)
+	
+	method initialize(){
+		tre1.llevaEsfuerzo()
+		tre1.duracion()
+		tre1.tomaColor()
+	}
+	test "probamos que la duracion es de 20 dias"{
+		assert.equals(2, tre1.cantidadDias())
+	}
+	test "probamos que leva esfuerzo"{
+		assert.that(tre1.implicaEsfuerzo())
+	}
+	test "probamos que sirve para broncearse"{
+		assert.notThat(tre1.paraBroncear())
+	}
+}

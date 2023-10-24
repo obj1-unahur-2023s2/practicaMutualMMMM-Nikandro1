@@ -1,0 +1,35 @@
+import viajes.*
+import socios.*
+
+describe"probamos a roque socio de la mutual"{
+	const roque = new Socios(maximoActividad = 2)
+	const playa1 = new DePlaya(largoPlaya=1000)
+	const playa2 = new DePlaya(largoPlaya=2000)
+	const gym1 = new ClaseGYM()
+	
+	method initialize(){
+		playa1.llevaEsfuerzo()
+		playa1.duracion()
+		playa1.tomaColor()
+		playa2.llevaEsfuerzo()
+		playa2.duracion()
+		playa2.tomaColor()
+		gym1.llevaEsfuerzo()
+		gym1.duracion()
+		gym1.tomaColor()
+		gym1.agregarIdioma("Español")
+		roque.realizarActividad(playa1)
+		roque.realizarActividad(playa2)
+	}
+	test "roque es adorador del sol"{
+		assert.that(roque.adoradorDelSol())
+	}
+	/* 
+	test "probamos que playa 2 es la unica activadad esforzadas"{
+		assert.equals(roque.actividadesEsforzadas(), #{playa2})
+	}
+	test "probamos que no puede realizar otra actividad"{
+		assert.throwsException(roque.realizarActividad(gym1))
+	}
+	*/
+}
